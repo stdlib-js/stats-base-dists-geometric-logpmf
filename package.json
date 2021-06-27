@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/stats-base-dists-geometric-logpmf",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Geometric distribution logarithm of probability mass function (PMF).",
   "license": "Apache-2.0",
   "author": {
