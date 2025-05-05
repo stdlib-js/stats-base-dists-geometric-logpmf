@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-03-01)
+## Unreleased (2025-05-05)
 
 <section class="features">
 
@@ -34,6 +34,7 @@ This release closes the following issue:
 
 <details>
 
+-   [`a1e230f`](https://github.com/stdlib-js/stdlib/commit/a1e230f29297caa89880e9c194c615a0400fb7bc) - **chore:** clean up cppcheck-suppress comments _(by Karan Anand)_
 -   [`e63c0b4`](https://github.com/stdlib-js/stdlib/commit/e63c0b409b6ce579268ac14d8f1ca4c3ff0b4390) - **feat:** add C implementation for `stats/base/dists/geometric/logpmf` [(#4221)](https://github.com/stdlib-js/stdlib/pull/4221) _(by Prashant Kumar Yadav, Philipp Burckhardt, stdlib-bot)_
 -   [`bce4dac`](https://github.com/stdlib-js/stdlib/commit/bce4dac63618cd50985d7875d89933c116cd185d) - **bench:** refactor random number generation in `stats/base/dists/geometric` [(#4931)](https://github.com/stdlib-js/stdlib/pull/4931) _(by Karan Anand, stdlib-bot)_
 
