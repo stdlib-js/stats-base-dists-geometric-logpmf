@@ -65,13 +65,13 @@ where `0 <= p <= 1` is the success probability. The random variable `X` denotes 
 ## Usage
 
 ```javascript
-import logpmf from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-geometric-logpmf@esm/index.mjs';
+import logpmf from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-geometric-logpmf@v0.3.0-esm/index.mjs';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-geometric-logpmf@esm/index.mjs';
+import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-geometric-logpmf@v0.3.0-esm/index.mjs';
 ```
 
 #### logpmf( x, p )
@@ -151,7 +151,7 @@ y = mylogpmf( 1.0 );
 import uniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-uniform@esm/index.mjs';
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@esm/index.mjs';
 import logEachMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@esm/index.mjs';
-import logpmf from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-geometric-logpmf@esm/index.mjs';
+import logpmf from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-geometric-logpmf@v0.3.0-esm/index.mjs';
 
 var opts = {
     'dtype': 'float64'
