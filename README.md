@@ -65,13 +65,13 @@ where `0 <= p <= 1` is the success probability. The random variable `X` denotes 
 ## Usage
 
 ```javascript
-import logpmf from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-geometric-logpmf@deno/mod.js';
+import logpmf from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-geometric-logpmf@v0.3.0-deno/mod.js';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-geometric-logpmf@deno/mod.js';
+import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-geometric-logpmf@v0.3.0-deno/mod.js';
 ```
 
 #### logpmf( x, p )
@@ -146,7 +146,7 @@ y = mylogpmf( 1.0 );
 import uniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-uniform@deno/mod.js';
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@deno/mod.js';
 import logEachMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@deno/mod.js';
-import logpmf from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-geometric-logpmf@deno/mod.js';
+import logpmf from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-geometric-logpmf@v0.3.0-deno/mod.js';
 
 var opts = {
     'dtype': 'float64'
