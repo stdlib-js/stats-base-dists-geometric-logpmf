@@ -58,25 +58,32 @@ where `0 <= p <= 1` is the success probability. The random variable `X` denotes 
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/stats-base-dists-geometric-logpmf
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import logpmf from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-geometric-logpmf@deno/mod.js';
-```
-The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/stats-base-dists-geometric-logpmf/tags). For example,
-
-```javascript
-import logpmf from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-geometric-logpmf@v0.3.0-deno/mod.js';
-```
-
-You can also import the following named exports from the package:
-
-```javascript
-import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-geometric-logpmf@deno/mod.js';
+var logpmf = require( '@stdlib/stats-base-dists-geometric-logpmf' );
 ```
 
 #### logpmf( x, p )
@@ -148,10 +155,10 @@ y = mylogpmf( 1.0 );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import uniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-uniform@deno/mod.js';
-import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@deno/mod.js';
-import logEachMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@deno/mod.js';
-import logpmf from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-geometric-logpmf@deno/mod.js';
+var uniform = require( '@stdlib/random-array-uniform' );
+var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
+var logEachMap = require( '@stdlib/console-log-each-map' );
+var logpmf = require( '@stdlib/stats-base-dists-geometric-logpmf' );
 
 var opts = {
     'dtype': 'float64'
@@ -168,7 +175,99 @@ logEachMap( 'x: %d, p: %0.4f, ln( P( X = x; p ) ): %0.4f', x, p, logpmf );
 
 <!-- C interface documentation. -->
 
+* * *
 
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/stats/base/dists/geometric/logpmf.h"
+```
+
+#### stdlib_base_dists_geometric_logpmf( x, p )
+
+Evaluates the logarithm of the [probability mass function][pmf] (PMF) of the [geometric][geometric-distribution] distribution with success probability `0 <= p <= 1`.
+
+```c
+double out = stdlib_base_dists_geometric_logpmf( 4.0, 0.3 );
+// returns ~-2.631
+```
+
+The function accepts the following arguments:
+
+-   **x**: `[in] double` input value.
+-   **p**: `[in] double` probability of success.
+
+```c
+double stdlib_base_dists_geometric_logpmf( const double x, const double p );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/stats/base/dists/geometric/logpmf.h"
+#include "stdlib/math/base/special/round.h"
+#include <stdlib.h>
+#include <stdio.h>
+
+static double random_uniform( const double min, const double max ) {
+    double v = (double)rand() / ( (double)RAND_MAX + 1.0 );
+    return min + ( v*(max-min) );
+}
+
+int main( void ) {
+    double x;
+    double p;
+    double y;
+    int i;
+
+    for ( i = 0; i < 25; i++ ) {
+        x = stdlib_base_round( random_uniform( 0.0, 40.0 ) );
+        p = random_uniform( 0.0, 1.0 );
+        y = stdlib_base_dists_geometric_logpmf( x, p );
+        printf( "x: %lf, p: %lf, ln(P(X=x;p)): %lf\n", x, p, y );
+    }
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section to include cited references. If references are included, add a horizontal rule *before* the section. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
@@ -195,7 +294,7 @@ logEachMap( 'x: %d, p: %0.4f, ln( P( X = x; p ) ): %0.4f', x, p, logpmf );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -225,8 +324,8 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/stats-base-dists-geometric-logpmf.svg
 [npm-url]: https://npmjs.org/package/@stdlib/stats-base-dists-geometric-logpmf
 
-[test-image]: https://github.com/stdlib-js/stats-base-dists-geometric-logpmf/actions/workflows/test.yml/badge.svg?branch=v0.3.0
-[test-url]: https://github.com/stdlib-js/stats-base-dists-geometric-logpmf/actions/workflows/test.yml?query=branch:v0.3.0
+[test-image]: https://github.com/stdlib-js/stats-base-dists-geometric-logpmf/actions/workflows/test.yml/badge.svg?branch=v0.3.1
+[test-url]: https://github.com/stdlib-js/stats-base-dists-geometric-logpmf/actions/workflows/test.yml?query=branch:v0.3.1
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/stats-base-dists-geometric-logpmf/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/stats-base-dists-geometric-logpmf?branch=main
