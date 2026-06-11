@@ -33,7 +33,7 @@ limitations under the License.
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
-> [Geometric][geometric-distribution] distribution logarithm of [probability mass function][pmf] (PMF).
+> [Geometric][geometric-distribution] distribution natural logarithm of [probability mass function][pmf] (PMF).
 
 <section class="intro">
 
@@ -88,7 +88,7 @@ var logpmf = require( '@stdlib/stats-base-dists-geometric-logpmf' );
 
 #### logpmf( x, p )
 
-Evaluates the logarithm of the [probability mass function][pmf] (PMF) of a [geometric][geometric-distribution] distribution with success probability `0 <= p <= 1`.
+Evaluates the natural logarithm of the [probability mass function][pmf] (PMF) of a [geometric][geometric-distribution] distribution with success probability `0 <= p <= 1`.
 
 ```javascript
 var y = logpmf( 4.0, 0.3 );
@@ -201,7 +201,7 @@ logEachMap( 'x: %d, p: %0.4f, ln( P( X = x; p ) ): %0.4f', x, p, logpmf );
 
 #### stdlib_base_dists_geometric_logpmf( x, p )
 
-Evaluates the logarithm of the [probability mass function][pmf] (PMF) of the [geometric][geometric-distribution] distribution with success probability `0 <= p <= 1`.
+Evaluates the natural logarithm of the [probability mass function][pmf] (PMF) of the [geometric][geometric-distribution] distribution with success probability `0 <= p <= 1`.
 
 ```c
 double out = stdlib_base_dists_geometric_logpmf( 4.0, 0.3 );
